@@ -3980,7 +3980,7 @@ caption{
       align-items: flex-start;
    }
    .franchise__about-text{
-      left: 50px;
+      left: 150px;
       top: 120px;
    }
 }
@@ -4202,7 +4202,7 @@ caption{
    }
    .franchise__sixth-title{
       position: absolute;
-      left: 150px;
+      // left: 150px;
       top: 270px;
       color: #bfc9da;
       font-size: 80px;
@@ -4924,17 +4924,69 @@ caption{
 }
 
 .franchise-page{
-   cursor: url(../images/cursor-default.svg), default;
-   a{
-      cursor: url(../images/cursor-hover.svg), pointer;
-   }
+   position: relative;
+   z-index: 2;
+   // cursor: url(../images/cursor-default.svg), default;
+   // a{
+   //    cursor: url(../images/cursor-hover.svg), pointer;
+   // }
    .slick-next,
    .slick-prev{
-      cursor: url(../images/cursor-hover.svg), pointer;
+      cursor: none;
+   }
+   cursor: none  !important;
+   a{
+      cursor: none;
+   }
+   *{
+      cursor: none;
+   }
+   // .franchise__slider-item,
+   // .slick-slide{
+   //    overflow: hidden !important;
+   // }
+}
+.cursor{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 10;
+   pointer-events: none;
+   user-select: none;
+   width: 14px;
+   height: 14px;
+   background: linear-gradient(to top, rgba(#89268f, .7) 0%, rgba(#8b2563, .7) 100%);
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   &.hover{
+      animation: cursorBig .3s forwards;
+   }
+   &.remove-hover{
+      animation: cursorSmall .3s forwards;
    }
 }
 
+@keyframes cursorBig{
+   from{
+      width: 14px;
+      height: 14px;
+   }
+   to{
+      width: 48px;
+      height: 48px;
+   }
+}
 
+@keyframes cursorSmall{
+   from{
+      width: 48px;
+      height: 48px;
+   }
+   to{
+      width: 14px;
+      height: 14px;
+   }
+}
 
 
 @import 'media';

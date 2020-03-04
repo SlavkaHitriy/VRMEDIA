@@ -34,6 +34,11 @@
    .franchise__sixth .franchise__join.second{
       left: 50px;
    }
+   .franchise__third{
+      .franchise__about-text{
+         left: 50px;
+      }
+   }
 }
 @media(max-width: 1900px){
    .franchise__third{
@@ -1459,6 +1464,9 @@
    }
 }
 @media (max-width: 1000px){
+   .cursor{
+      display: none;
+   }
    .franchise_sixth-text.small{
       margin-top: 0;
    }
@@ -2045,10 +2053,14 @@
       .franchise__about-text{
          display: none;
          &.franchise-mobile{
-            display: block;
+            display: inline-block;
             top: -3px;
          }
       }
+   }
+   .franchise__sixth .franchise__forth-suptitle{
+      display: inline-block;
+      width: 90%;
    }
    .franchise__about-text{
       color: #bfc9da;
