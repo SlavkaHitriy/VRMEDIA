@@ -1,0 +1,48 @@
+{
+  "name": "start-gulp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Slavka",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "cssmin": "^0.4.3",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "dependencies": {
+    "animate.css": "^3.7.2",
+    "enquire.js": "^2.1.6",
+    "lg-autoplay": "^1.0.4",
+    "lg-fullscreen": "^1.1.0",
+    "lg-hash": "^1.0.4",
+    "lg-pager": "^1.0.2",
+    "lg-share": "^1.1.0",
+    "lg-thumbnail": "^1.1.0",
+    "lg-video": "^1.2.2",
+    "lg-zoom": "^1.1.0",
+    "lightgallery": "^1.6.12",
+    "magnific-popup": "^1.1.0",
+    "remodal": "^1.1.1",
+    "wow.js": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SlavkaHitriy/VRMEDIA.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SlavkaHitriy/VRMEDIA/issues"
+  },
+  "homepage": "https://github.com/SlavkaHitriy/VRMEDIA#readme",
+  "description": ""
+}
