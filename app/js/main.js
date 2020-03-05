@@ -12,23 +12,30 @@ $(window).on('load', function(){
 
 $(function () {
 
-   $(document).mousemove(function(e){
-      if(e.clientX + 14 >= document.documentElement.clientWidth && e.clientY + 14 >= document.documentElement.clientHeight){
-         $('.cursor').css({left: document.documentElement.clientWidth - 14, top: document.documentElement.clientHeight - 14});
-      } else if (e.clientX + 14 >= document.documentElement.clientWidth){
-         $('.cursor').css({left: document.documentElement.clientWidth - 14, top:  e.clientY});
-      } else if (e.clientY + 14 >= document.documentElement.clientHeight){
-         $('.cursor').css({top: document.documentElement.clientHeight - 14, left: e.clientX});
-      }
-      else{
-         $('.cursor').css({left: e.clientX, top: e.clientY, display: 'block'});
-      }
-      if(e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0]){
-         $('.cursor').removeClass('remove-hover');
-         $('.cursor').addClass('hover');
-      } else {
-         $('.cursor').removeClass('hover')
-         $('.cursor').addClass('remove-hover')
+   enquire.register("screen and (min-width:1000px)", {
+      match: function(){
+         $(document).mousemove(function(e){
+            if(e.clientX + 14 >= document.documentElement.clientWidth && e.clientY + 14 >= document.documentElement.clientHeight){
+               $('.cursor').css({left: document.documentElement.clientWidth - 14, top: document.documentElement.clientHeight - 14});
+            } else if (e.clientX + 14 >= document.documentElement.clientWidth){
+               $('.cursor').css({left: document.documentElement.clientWidth - 14, top:  e.clientY});
+            } else if (e.clientY + 14 >= document.documentElement.clientHeight){
+               $('.cursor').css({top: document.documentElement.clientHeight - 14, left: e.clientX});
+            }
+            else{
+               $('.cursor').css({left: e.clientX, top: e.clientY, display: 'block'});
+            }
+            if(e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0]){
+               $('.cursor').removeClass('remove-hover');
+               $('.cursor').addClass('hover');
+            } else {
+               $('.cursor').removeClass('hover')
+               $('.cursor').addClass('remove-hover')
+            }
+         })
+      },
+      unmatch: function(){
+         $('.cursor').css('display', 'none');
       }
    })
 
