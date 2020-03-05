@@ -3421,58 +3421,58 @@ caption{
 
 .franchise__wrapper{
    position: relative;
-   &.style-2{
+   &.style-1{
       .slick-next{
          &::before{
             content: 'Достижения';
          }
       }
    }
+   &.style-2,
    &.style-3,
-   &.style-4,
-   &.style-5{
+   &.style-4{
       .slick-next{
          &::before{
             content: 'Далее';
          }
       }
    }
-   &.style-6{
+   &.style-5{
       .slick-next{
          &::before{
             content: 'О франшизе'
          }
       }
    }
-   &.style-7{
+   &.style-6{
       .slick-next{
          &::before{
             content: 'Достижения'
          }
       }
    }
-   &.style-8{
+   &.style-7{
       .slick-next{
          &::before{
             content: 'Расчёт прибыли'
          }
       }
    }
-   &.style-9{
-      .slick-next{
-         &::before{
-            content: 'Требования'
-         }
-      }
-   }
-   &.style-10{
+   // &.style-9{
+   //    .slick-next{
+   //       &::before{
+   //          content: 'Требования'
+   //       }
+   //    }
+   // }
+   &.style-8{
       .slick-next{
          &::before{
             content: 'Помощь партнеру'
          }
       }
    }
-   &.style-11{
+   &.style-9{
       .slick-next{
          &::before{
             content: 'Связаться'
@@ -4955,7 +4955,7 @@ caption{
    user-select: none;
    width: 14px;
    height: 14px;
-   background: linear-gradient(to top, rgba(#89268f, .7) 0%, rgba(#8b2563, .7) 100%);
+   background: linear-gradient(to top, rgba(#89268f, .8) 0%, rgba(#8b2563, .8) 100%);
    border-radius: 50%;
    transform: translate(-50%, -50%);
    &.hover{

@@ -384,13 +384,13 @@ $(function () {
       } else {
          $('.franchise__dots li').eq(6).removeClass('wait');
       }
-      if ($('.franchise__dots li').eq(13).hasClass('slick-active')) {
-         $('.franchise__dots li').css("display", "none");
-      }
+      // if ($('.franchise__dots li').eq(13).hasClass('slick-active')) {
+      //    $('.franchise__dots li').css("display", "none");
+      // }
       let index = $('.slick-current').index();
       $('.franchise__wrapper').addClass('style-' + index);
       $('.franchise__wrapper').removeClass('style-' + --index);
-      if (index === 11) {
+      if (index === 9) {
          $('.franchise__wrapper .slick-next').css("display", "none");
       } else {
          $('.franchise__wrapper .slick-next').css("display", "block");
@@ -441,7 +441,7 @@ $(function () {
             $('.franchise__dots li').eq(2).removeClass('wait');
          }
          let index1 = $('.slick-current').index();
-         if (index1 === 12) {
+         if (index1 === 10) {
             $('.franchise__wrapper .slick-next').css("display", "none");
          } else {
             $('.franchise__wrapper .slick-next').css("display", "block");
@@ -519,16 +519,16 @@ $(function () {
             $('.franchise__dots li').css("display", "none");
          }
          let index = $('.slick-current').index();
-         if (index === 12 || index === 13) {
+         if (index === 10 || index === 13) {
             $('.franchise__wrapper .slick-next').css("display", "none");
          } else {
             $('.franchise__wrapper .slick-next').css("display", "block");
          }
-         if (index === 13) {
-            $('.franchise__wrapper .franchise__dots').css("display", "none");
-         } else {
-            $('.franchise__wrapper .franchise__dots').css("display", "flex");
-         }
+         // if (index === 13) {
+         //    $('.franchise__wrapper .franchise__dots').css("display", "none");
+         // } else {
+         //    $('.franchise__wrapper .franchise__dots').css("display", "flex");
+         // }
          for(let v = 0; v <= index; v++){
             $('.franchise__dots li').eq(v).addClass('active');
          }
