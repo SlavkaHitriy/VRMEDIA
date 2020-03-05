@@ -35,7 +35,7 @@ $(function () {
          })
       },
       unmatch: function(){
-         $('.cursor').css('display', 'none');
+         $('.cursor').remove();
       }
    })
 
