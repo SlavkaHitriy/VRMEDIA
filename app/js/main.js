@@ -13,7 +13,16 @@ $(window).on('load', function(){
 $(function () {
 
    $(document).mousemove(function(e){
-      $('.cursor').css({left: e.clientX, top: e.clientY});
+      if(e.clientX + 14 >= document.documentElement.clientWidth && e.clientY + 14 >= document.documentElement.clientHeight){
+         $('.cursor').css({left: document.documentElement.clientWidth - 14, top: document.documentElement.clientHeight - 14});
+      } else if (e.clientX + 14 >= document.documentElement.clientWidth){
+         $('.cursor').css({left: document.documentElement.clientWidth - 14, top:  e.clientY});
+      } else if (e.clientY + 14 >= document.documentElement.clientHeight){
+         $('.cursor').css({top: document.documentElement.clientHeight - 14, left: e.clientX});
+      }
+      else{
+         $('.cursor').css({left: e.clientX, top: e.clientY, display: 'block'});
+      }
       if(e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0]){
          $('.cursor').removeClass('remove-hover');
          $('.cursor').addClass('hover');
@@ -59,38 +68,6 @@ $(function () {
 
    $('#form__number').mask("+7 (999) 999-99-99");
 
-   $('#form__name').focusout(function () {
-      if ($(this).val() == '') {
-         $('.form__block.name').addClass('active');
-      } else if ($(this).val() !== '') {
-         $('.form__block.name').removeClass('active');
-      }
-      if ($(this).val() == '') {
-         $(this).prev().removeClass('active');
-      }
-   });
-
-   $('#form__email').focusout(function () {
-      if ($(this).val() == '') {
-         $('.form__block.email').addClass('active');
-      } else if ($(this).val() !== '') {
-         $('.form__block.email').removeClass('active');
-      }
-      if ($(this).val() == '') {
-         $(this).prev().removeClass('active');
-      }
-   });
-
-   $('#form__text').focusout(function () {
-      if ($(this).val() == '') {
-         $('.form__block.text').addClass('active');
-      } else if ($(this).val() !== '') {
-         $('.form__block.text').removeClass('active');
-      }
-      if ($(this).val() == '') {
-         $(this).prev().removeClass('active');
-      }
-   });
 
    if (window.innerWidth < 1175) {
       $('.about__what-title.first').hide();
@@ -116,17 +93,6 @@ $(function () {
       $('.about__earn-money').hide();
    }
 
-   $('#form__name').focus(function () {
-      $(this).prev().addClass('active');
-   });
-
-   $('#form__email').focus(function () {
-      $(this).prev().addClass('active');
-   });
-
-   $('#form__text').focus(function () {
-      $(this).prev().addClass('active');
-   });
 
    // if(window.innerWidth < 1000){
    //    $('#form__name').on('focus',function () {
@@ -362,6 +328,50 @@ $(function () {
             settings: "unslick"
          }
       ]
+   });
+
+   $('#form__name').focus(function () {
+      $(this).prev().addClass('active');
+   });
+
+   $('#form__email').focus(function () {
+      $(this).prev().addClass('active');
+   });
+
+   $('#form__text').focus(function () {
+      $(this).prev().addClass('active');
+   });
+   $('#form__name').focusout(function () {
+      if ($(this).val() == '') {
+         $('.form__block.name').addClass('active');
+      } else if ($(this).val() !== '') {
+         $('.form__block.name').removeClass('active');
+      }
+      if ($(this).val() == '') {
+         $(this).prev().removeClass('active');
+      }
+   });
+
+   $('#form__email').focusout(function () {
+      if ($(this).val() == '') {
+         $('.form__block.email').addClass('active');
+      } else if ($(this).val() !== '') {
+         $('.form__block.email').removeClass('active');
+      }
+      if ($(this).val() == '') {
+         $(this).prev().removeClass('active');
+      }
+   });
+
+   $('#form__text').focusout(function () {
+      if ($(this).val() == '') {
+         $('.form__block.text').addClass('active');
+      } else if ($(this).val() !== '') {
+         $('.form__block.text').removeClass('active');
+      }
+      if ($(this).val() == '') {
+         $(this).prev().removeClass('active');
+      }
    });
 
    $('.franchise__slider .slick-next').on('click', function (){
