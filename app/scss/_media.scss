@@ -1464,6 +1464,12 @@
    }
 }
 @media (max-width: 1000px){
+   .franchise__video{
+      display: none;
+   }
+   .franchise__fifth{
+      background-image: url(../images/map2.jpg);
+   }
    .cursor{
       display: none;
    }
