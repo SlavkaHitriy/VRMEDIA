@@ -322,8 +322,6 @@ $(function () {
       let tmp = document.location.href.match(/(slide)\d/)[0];
 
    
-      console.log(tmp)
-   
       let result = getSlideIndex(tmp) - 1;
       
       function getSlideIndex(tmp){
@@ -353,7 +351,7 @@ $(function () {
          ]
       });
    } else {
-      $('.franchise__slider').slick({
+      var slider = $('.franchise__slider').slick({
          dots: true,
          arrows: true,
          draggable: false,
@@ -369,7 +367,13 @@ $(function () {
             }
          ]
       });
+      $('.franchise__join').on('click', function(){
+         slider.slick('slickGoTo', 10)
+      });
    }
+   
+
+  
    
    
 
