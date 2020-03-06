@@ -699,7 +699,7 @@ $(function () {
          }, 1200);
          setTimeout(function () {
             testBool = true;
-         }, 2000)
+         }, 1500)
       }
    }));
 
