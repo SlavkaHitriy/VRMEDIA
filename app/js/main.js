@@ -25,13 +25,16 @@ $(function () {
             else{
                $('.cursor').css({left: e.clientX, top: e.clientY, display: 'block'});
             }
-            if(e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0]){
-               $('.cursor').removeClass('remove-hover');
-               $('.cursor').addClass('hover');
-            } else {
-               $('.cursor').removeClass('hover')
-               $('.cursor').addClass('remove-hover')
-            }
+            for(let item of $('.franchise__dots li')){
+               if(e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0] || e.target === item){
+                  $('.cursor').removeClass('remove-hover');
+                  $('.cursor').addClass('hover');
+               }               
+                else {
+                  $('.cursor').removeClass('hover')
+                  $('.cursor').addClass('remove-hover')
+               }
+            }  
          })
       },
       unmatch: function(){

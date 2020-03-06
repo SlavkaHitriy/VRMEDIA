@@ -3549,6 +3549,7 @@ caption{
    margin: 0;
    // pointer-events: none;
    li{
+      border: 10px solid transparent;
       &:nth-child(13),
       &:nth-child(14){
          display: none;
@@ -3632,18 +3633,32 @@ caption{
          display: block;
          background-color: #3e444e;
          height: 1px;
-         width: 90%;
+         width: calc(100% + 5px);
          position: absolute;
-         right: 6%;
+         right: 10px;
          top: 50%;
          transform: translateY(-50%);
          z-index: 4;
+         pointer-events: none;
+      }
+      &:nth-child(2){
+         &::before{
+            width: 100%;
+         }
+      }
+      button{
+         &::before{
+            content: '';
+            opacity: 1;
+            visibility: visible;
+            transition: all .5s;
+         }
       }
       &:nth-child(7){
          width: 10%;
          &::before{
-            right: 10%;
-            width: 85%;
+            right: 10px;
+            width: calc(100% + 5px);
          }
       }
       &:nth-child(4),
@@ -3657,8 +3672,8 @@ caption{
          }
          width: 5%;
          &::before{
-            right: 15%;
-            width: 75%;
+            right: 9px;
+            width: calc(100% + 5px);
          }
       }
    }
@@ -3679,9 +3694,16 @@ caption{
    .show-label{
       &::before{
          background-color: #a8c0e6;
+         transition: all .5s;
       }
       button{
          background-color: #a8c0e6;
+         &::before{
+            content: '';
+            transition: all .5s;
+            opacity: 1;
+            visibility: visible;
+         }
       }
       &:first-child{
          button{
@@ -4547,11 +4569,17 @@ caption{
          color: #bfccdf;
          left: 0;
       }
-      .form__name-text{
+      .form__name-text, .form__email-text, .form__text-text{
          color: #f22a2a;
       }
       label:not(.form__name-text){
          font-size: 24px;
+      }
+      label.form__email-text, label.form__text-text{
+         font-size: 12px;
+      }
+      label.form__text-text{
+         bottom: -22px;
       }
    }
    .form__send{
