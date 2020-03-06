@@ -3568,13 +3568,13 @@ caption{
                }
             }
          }
-         &:nth-child(12){
-            button{
-               &::before{
-                  content: '08 | связаться |';
-               }
-            }
-         }
+         // &:nth-child(12){
+         //    button{
+         //       &::before{
+         //          content: '08 | связаться |';
+         //       }
+         //    }
+         // }
          button{
             position: relative;
             &::before{
@@ -3719,24 +3719,25 @@ caption{
       &:nth-child(10){
          button{
             &::before{
-               content: '06 | требование к партнеру |';
+               content: '06 | помощь партнеру |';
             }
          }
       }
       &:nth-child(11){
          button{
             &::before{
-               content: '07 | помощь партнеру |';
+               content: '07 | связаться |';
             }
          }
       }
-      &:nth-child(12){
-         button{
-            &::before{
-               content: '08 | связаться |';
-            }
-         }
-      }
+      
+      // &:nth-child(12){
+      //    button{
+      //       &::before{
+      //          content: '08 | связаться |';
+      //       }
+      //    }
+      // }
       button{
          position: relative;
          &::before{
