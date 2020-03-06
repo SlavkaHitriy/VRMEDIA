@@ -3607,7 +3607,8 @@ caption{
             }
          }
       }
-      &.active{
+      &.active,
+      &.active-label{
          &::before{
             background-color: #a8c0e6;
          }
@@ -3674,7 +3675,8 @@ caption{
       background-color: #3e444e;
       outline: none;
    }
-   .slick-active{
+   .slick-active,
+   .show-label{
       &::before{
          background-color: #a8c0e6;
       }

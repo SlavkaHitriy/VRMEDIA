@@ -409,7 +409,48 @@ $(function () {
    
 
   
-   
+   $('.franchise__dots li').on('mouseover', function(){
+      // if($(this).hasClass('active')){
+      //    $(this).addClass('show-label slick-active');
+      // }
+      // else if($('.franchise__dots li').hasClass('show-label')){
+      //    $('.franchise__dots li').not('.active.slick-active').removeClass('show-label slick-active')
+      // } else {
+         
+      // }
+
+      if($(this).index() == 4 || $(this).index() == 5 || $(this).index() == 3 || $(this).index() == 7){
+         $(this).addClass('active-label');
+      } else {
+         $(this).addClass('show-label');
+      }
+
+      for (let i = 3; i <= 5; i++) {
+         if ($('.franchise__dots li').eq(i).hasClass('slick-active')) {
+            $('.franchise__dots li').eq(2).addClass('wait');
+            $('.franchise__dots li').eq(i).addClass('disable');
+         }
+      }
+      if ($('.franchise__dots li').eq(6).hasClass('slick-active')) {
+         $('.franchise__dots li').eq(2).removeClass('wait');
+      }
+      if ($('.franchise__dots li').eq(7).hasClass('slick-active')) {
+         $('.franchise__dots li').eq(6).addClass('wait');
+         $('.franchise__dots li').eq(7).addClass('disable');
+      } else {
+         $('.franchise__dots li').eq(6).removeClass('wait');
+      }
+      if ($('.franchise__dots li').eq(12).hasClass('slick-active')) {
+         $('.franchise__dots li').eq(11).addClass('wait');
+      }
+   })
+   $('.franchise__dots li').on('mouseout', function(){
+      if($(this).index() == 4 || $(this).index() == 5 || $(this).index() == 3 || $(this).index() == 7){
+         $(this).removeClass('active-label');
+      } else {
+         $(this).removeClass('show-label');
+      }
+   })
    
 
    $('#form__name').focus(function () {
