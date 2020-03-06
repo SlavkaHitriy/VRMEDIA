@@ -3614,7 +3614,7 @@ caption{
             background-color: #a8c0e6;
          }
          button{
-            background-color: #a8c0e6;
+            background-image: url(../images/navigation-dots-light.svg);
          }
       }
       position: relative;
@@ -3622,7 +3622,8 @@ caption{
       &:first-child{
          width: 5px;
          button{
-            background-color: #a8c0e6;
+            background-image: url(../images/navigation-dots-light.svg);
+            background-position: center;
          }
          &::before{
             display: none;
@@ -3633,9 +3634,9 @@ caption{
          display: block;
          background-color: #3e444e;
          height: 1px;
-         width: calc(100% + 5px);
+         width: 100%;
          position: absolute;
-         right: 10px;
+         right: 20px;
          top: 50%;
          transform: translateY(-50%);
          z-index: 4;
@@ -3643,7 +3644,7 @@ caption{
       }
       &:nth-child(2){
          &::before{
-            width: 100%;
+            width: calc(100% - 20px);
          }
       }
       button{
@@ -3657,8 +3658,8 @@ caption{
       &:nth-child(7){
          width: 10%;
          &::before{
-            right: 10px;
-            width: calc(100% + 5px);
+            right: 20px;
+            width: 100% ;
          }
       }
       &:nth-child(4),
@@ -3666,14 +3667,13 @@ caption{
       &:nth-child(6),
       &:nth-child(8){
          button{
-            width: 3px;
-            height: 3px;
+            background-size: 3px;
             margin-top: 1px;
          }
          width: 5%;
          &::before{
-            right: 9px;
-            width: calc(100% + 5px);
+            right: 20px;
+            width: 100%;
          }
       }
    }
@@ -3681,13 +3681,19 @@ caption{
       margin-left: auto;
       background: none;
       padding: 0;
-      border: none;
+      border: 10px solid transparent;
       font-size: 0;
       width: 5px;
       height: 5px;
       display: block;
       border-radius: 50%;
-      background-color: #3e444e;
+      background-image: url(../images/navigation-dots-dark.svg);
+      background-position: center;
+      background-size: 5px;
+      background-repeat: no-repeat;
+      // background-color: #3e444e;
+      // background: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 25%, #3e444e 25%, #3e444e 75%, rgba(0,0,0,0) 75%, rgba(0,0,0,0) 100%);
+      // background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(9,9,121,0) 50%, rgba(0,212,255,0) 76%);
       outline: none;
    }
    .slick-active,
@@ -3697,7 +3703,7 @@ caption{
          transition: all .5s;
       }
       button{
-         background-color: #a8c0e6;
+         background-image: url(../images/navigation-dots-light.svg);
          &::before{
             content: '';
             transition: all .5s;
@@ -5002,10 +5008,10 @@ caption{
    border-radius: 50%;
    transform: translate(-50%, -50%);
    &.hover{
-      animation: cursorBig .3s forwards;
+      animation: cursorBig .1s forwards;
    }
    &.remove-hover{
-      animation: cursorSmall .3s forwards;
+      animation: cursorSmall .1s forwards;
    }
 }
 
