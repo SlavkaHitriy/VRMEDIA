@@ -318,36 +318,60 @@ $(function () {
       $(this).next().toggleClass('show');
    });
 
-   let tmp = document.location.href.match(/(slide)\d/)[0];
+   if(document.location.href.match(/(slide)\d/)){
+      let tmp = document.location.href.match(/(slide)\d/)[0];
 
-   let result = getSlideIndex(tmp) - 1;
    
-   function getSlideIndex(tmp){
-      for(let item of $('.franchise__slider-item') ){
-         let slideIndex = 0;
-         if(item.attributes.id.value == tmp){
-            slideIndex = tmp.match(/\d/)[0];
-            return slideIndex;
+      console.log(tmp)
+   
+      let result = getSlideIndex(tmp) - 1;
+      
+      function getSlideIndex(tmp){
+         for(let item of $('.franchise__slider-item') ){
+            let slideIndex = 0;
+            if(item.attributes.id.value == tmp){
+               slideIndex = tmp.match(/\d/)[0];
+               return slideIndex;
+            }
          }
       }
+      $('.franchise__slider').slick({
+         dots: true,
+         arrows: true,
+         draggable: false,
+         swipe: false,
+         loop: false,
+         dotsClass: 'franchise__dots',
+         fade: true,
+         initialSlide: result,
+         slidesToShow: 1,
+         responsive: [
+            {
+               breakpoint: 1000,
+               settings: "unslick"
+            }
+         ]
+      });
+   } else {
+      $('.franchise__slider').slick({
+         dots: true,
+         arrows: true,
+         draggable: false,
+         swipe: false,
+         loop: false,
+         dotsClass: 'franchise__dots',
+         fade: true,
+         slidesToShow: 1,
+         responsive: [
+            {
+               breakpoint: 1000,
+               settings: "unslick"
+            }
+         ]
+      });
    }
-   $('.franchise__slider').slick({
-      dots: true,
-      arrows: true,
-      draggable: false,
-      swipe: false,
-      loop: false,
-      dotsClass: 'franchise__dots',
-      fade: true,
-      initialSlide: result,
-      slidesToShow: 1,
-      responsive: [
-         {
-            breakpoint: 1000,
-            settings: "unslick"
-         }
-      ]
-   });
+   
+   
 
    $('#form__name').focus(function () {
       $(this).prev().addClass('active');
