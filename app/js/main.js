@@ -350,6 +350,9 @@ $(function () {
             }
          ]
       });
+      $('.franchise__join').on('click', function(){
+         slider.slick('slickGoTo', 10)
+      });
    } else {
       var slider = $('.franchise__slider').slick({
          dots: true,
