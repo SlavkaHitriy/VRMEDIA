@@ -333,7 +333,7 @@ $(function () {
             }
          }
       }
-      $('.franchise__slider').slick({
+      var slider = $('.franchise__slider').slick({
          dots: true,
          arrows: true,
          draggable: false,
