@@ -28,7 +28,7 @@ $(function () {
             // console.log($('.franchise__dots li').find('button'))
             $('.franchise__dots li').each(function(){
                // console.log($(this).find($('button'))[0])
-               if (e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0]) {
+               if (e.target === $('a')[0] || e.target === $('button')[0] || e.target === $('.slick-next')[0] || e.target === $('.slick-prev')[0] || e.target === $('.franchise__twelfth .form__send')[0]) {
                   $('.cursor').removeClass('remove-hover');
                   $('.cursor').addClass('hover');
                }
@@ -519,12 +519,18 @@ $(function () {
    $('#form__text').focus(function () {
       $(this).prev().addClass('active');
    });
-   $('#form__name').focusout(function () {
+   $('#form__name').not('.franchise__form #form__name').focusout(function () {
       if ($(this).val() == '') {
          $('.form__block.name').addClass('active');
       } else if ($(this).val() !== '') {
          $('.form__block.name').removeClass('active');
       }
+      if ($(this).val() == '') {
+         $(this).prev().removeClass('active');
+      }
+   });
+
+   $('.franchise__form #form__name').focusout(function () {
       if ($(this).val() == '') {
          $(this).prev().removeClass('active');
       }
