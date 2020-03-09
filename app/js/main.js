@@ -444,6 +444,16 @@ $(function () {
 
    })
 
+   $('.franchise__twelfth .form__send').on('click', function(){
+      $('.franchise__thirteenth').addClass('show');
+      setTimeout(function(){
+         slider.slick('slickGoTo', 0)
+      }, 1000)
+      setTimeout(function(){
+         $('.franchise__thirteenth').removeClass('show');
+      }, 3000)
+   });
+
 
    $('.franchise__dots li').on('mouseover', function () {
       // if($(this).hasClass('active')){
