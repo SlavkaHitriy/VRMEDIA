@@ -1470,6 +1470,9 @@
    .franchise__fifth{
       background-image: url(../images/map2.jpg);
    }
+   .franchise__twelfth{
+      padding-bottom: 50px;
+   }
    .cursor{
       display: none !important;
    }
@@ -1513,12 +1516,7 @@
    .franchise__mark{
       display: none;
    }
-   .franchise__slider-item{
-      padding: 20px 0;
-      & + .franchise__slider-item{
-         margin-top: -1px;
-      }
-   }
+  
    
    .franchise__first{
       background-image: none;
@@ -1585,7 +1583,6 @@
          display: none;
       }
    }
-   .franchise__thirteenth,
    .franchise__tenth{
       display: none;
    }
@@ -2006,6 +2003,18 @@
    }
    .franchise__wrapper{
       background-color: #1d2127;
+   }
+   .franchise__slider-item{
+      padding: 20px 0;
+      & + .franchise__slider-item{
+         margin-top: -1px;
+      }
+   }
+   .franchise__slider-item.franchise__thirteenth{
+      background-color: #1d2127;
+      .franchise__inner{
+         align-items: center;
+      }
    }
    .franchise__slider-item{
       padding: 0;
