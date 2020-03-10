@@ -51,6 +51,7 @@ $(function () {
       }
    })
 
+
    var wow = new WOW();
    wow.init();
 
@@ -333,12 +334,10 @@ $(function () {
    if (document.location.href.match(/(slide)\d/)) {
       let tmp = document.location.href.match(/(slide)\d{1,2}/)[0];
 
-      console.log(tmp)
 
 
       let result = getSlideIndex(tmp) - 1;
 
-      console.log(result)
 
       function getSlideIndex(tmp) {
          for (let item of $('.franchise__slider-item')) {
@@ -426,7 +425,7 @@ $(function () {
             }
          ]
       });
-      $('.franchise__join').on('click', function () {
+      $('.franchise__join.franchise-hide').on('click', function () {
          slider.slick('slickGoTo', 10);
          $('.franchise__wrapper .slick-next').css('display', 'none');
          if ($('.franchise__slider .slick-current').index() == $('.franchise__slider .slick-slide').last().index()) {
@@ -783,6 +782,47 @@ $(function () {
          }, 1500)
       }
    }));
+
+   $('.franchise__join.franchise-mobile').on('click', function(e){
+      e.preventDefault();
+      let top = $('#slide11').offset().top;
+      $('body,html').animate({scrollTop: top}, 500);
+   })
+
+   enquire.register("screen and (max-width:1000px)", {
+
+      match: function(){
+         $('.franchise__twelfth .form__send').on('click', function(e){
+            e.preventDefault();
+            setTimeout(function(){
+               let top = $('#slide0').offset().top;
+               $('body,html').animate({scrollTop: top}, 500);
+            }, 500)
+         })
+
+         if (document.location.href.match(/(slide)\d/)) {
+            let tmp = document.location.href.match(/(slide)\d{1,2}/)[0];
+      
+            let result = getSlideIndex(tmp) - 1;
+
+            console.log(result)
+
+            let top = $('#slide' + result).offset().top;
+            $('body,html').animate({scrollTop: top}, 500);
+      
+            function getSlideIndex(tmp) {
+               for (let item of $('.franchise__slider-item')) {
+                  let slideIndex = 0;
+                  if (item.attributes.id.value == tmp) {
+                     slideIndex = tmp.match(/\d{1,2}/)[0];
+                     return slideIndex;
+                  }
+               }
+            }
+         }
+      }
+
+   });
 
 
 

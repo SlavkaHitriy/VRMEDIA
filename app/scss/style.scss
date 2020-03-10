@@ -4070,7 +4070,7 @@ caption{
    }
    &:nth-child(2){
       img{
-         margin-bottom: 50px;
+         margin-bottom: 33px;
       }
    }
    &:last-child{
@@ -4698,7 +4698,7 @@ caption{
    display: flex;
    justify-content: center;
    align-items: center;
-   position: absolute;
+   position: fixed;
    left: 0;
    top: 0;
    z-index: 10;

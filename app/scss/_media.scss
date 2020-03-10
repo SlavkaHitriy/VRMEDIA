@@ -2870,7 +2870,31 @@
    }
 }
 @media (max-width: 700px){
-   
+   .franchise__thirteenth{
+      .franchise__inner{
+         padding: 0 20px;
+      }
+      .franchise__thirteenth-title{
+         font-size: 55px;
+         &::after{
+            width: 114px;
+            height: 114px;
+         }
+         &::before{
+            width: 189px;
+            height: 111px;
+            left: 40%;
+         }
+      }
+      .franchise__thirteenth-title,
+      .franchise__thirteenth-text{
+         max-width: 400px;
+      }
+      .franchise__thirteenth-text{
+         font-size: 20px;
+         line-height: 35px;
+      }
+   }
    .create{
       padding-bottom: 200px;
    }
