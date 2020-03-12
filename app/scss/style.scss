@@ -5132,6 +5132,11 @@ caption{
          transition-delay: .8s;
          opacity: 1;
       }
+      .franchise__burger-menu-inner{
+         a{
+            font-size: 20px;
+         }
+      }
    }
    &.hide{
       animation: AnimHideMobileMenu .8s forwards;
@@ -5219,6 +5224,24 @@ caption{
       position: absolute;
       top: 26px;
       right: 20px;
+   }
+   .franchise__burger-menu-inner{
+      position: absolute;
+      bottom: 110px;
+      left: 20px;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      li{
+         & + li{
+            margin-top: 30px;
+         }
+         a{
+            color: #bfc9da;
+            font-size: 0;
+            transition: all .5s;
+         }
+      }
    }
 }
 @keyframes AnimShowMobileMenu{
