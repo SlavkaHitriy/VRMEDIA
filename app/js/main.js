@@ -66,6 +66,7 @@ $(function () {
          $(this).find('a').css('transition-delay', '0s');
       })
    })
+   console.log('test')
 
    $(".franchise__burger-menu-inner").on("click", "a", function (e) {
       e.preventDefault();
