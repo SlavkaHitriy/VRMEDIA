@@ -1405,55 +1405,10 @@
    margin-bottom: 25px;
 }
 .instruction__parent-item{
-   color: #525252;
-   font-size: 16px;
-   line-height: 24px;
-   position: relative;
-   padding-left: 25px;
-   & + .instruction__parent-item{
-      margin-top: 15px;
-   }
-   &::before{
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #f03382;
-      left: 10px;
-      top: 10px;
-   }
+   
 }
 .instruction__child-item{
-   font-size: 16px;
-   color: #525252;
-   line-height: 24px;
-   padding-left: 50px;
-   position: relative;
-   margin-top: 15px;
-   & + .instruction__child-item{
-      margin-top: 15px;
-   }
-   &::before{
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #a8a8a8;
-      left: 25px;
-      top: 10px;
-   }
-   &::after{
-      content: '';
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background-color: #a8a8a8;
-      left: 35px;
-      top: 10px;
-   }
+   
 }
 .instruction__title-2{
    margin-top: 30px;
@@ -1596,6 +1551,67 @@
       span:last-child{
          margin-top: 15px;
          display: block;
+      }
+   }
+   ul>li{
+      color: #525252;
+      font-size: 16px;
+      line-height: 24px;
+      position: relative;
+      padding-left: 25px;
+      & + .instruction__parent-item{
+         margin-top: 15px;
+      }
+      &::before{
+         content: '';
+         position: absolute;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: #f03382;
+         left: 10px;
+         top: 10px;
+      }
+      &:last-child{
+         &::before{
+            display: none;
+         }
+      }
+   }
+   li>ul>li{
+      font-size: 16px;
+      color: #525252;
+      line-height: 24px;
+      padding-left: 50px;
+      position: relative;
+      margin-top: 15px;
+      & + li{
+         margin-top: 15px;
+      }
+      &::before{
+         content: '';
+         position: absolute;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: #a8a8a8;
+         left: 25px;
+         top: 10px;
+      }
+      &::after{
+         content: '';
+         position: absolute;
+         width: 4px;
+         height: 4px;
+         border-radius: 50%;
+         background-color: #a8a8a8;
+         left: 35px;
+         top: 10px;
+      }
+      &:last-child{
+         &::before{
+            display: block;
+         }
       }
    }
 }
