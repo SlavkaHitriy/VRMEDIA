@@ -1559,7 +1559,7 @@
       line-height: 24px;
       position: relative;
       padding-left: 25px;
-      & + .instruction__parent-item{
+      & + li{
          margin-top: 15px;
       }
       &::before{
