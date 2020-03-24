@@ -1501,6 +1501,9 @@
    }
 }
 @media (max-width: 1000px){
+   .typical__cooperation{
+      margin: 25px 20px;
+   }
    .franchise__video{
       display: none;
    }
@@ -3595,6 +3598,12 @@
    }
 }
 @media (max-width: 600px){
+   .typical__cooperation p{
+      font-size: 20px;
+   }
+   .typical__cooperation{
+      padding: 20px;
+   }
    // .problems__inner{
    //    // .problems__item{
    //    //    width: 100%;
