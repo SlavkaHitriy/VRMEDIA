@@ -1502,7 +1502,7 @@
 }
 @media (max-width: 1000px){
    .typical__cooperation{
-      margin: 25px 20px;
+      margin: 25px 0;
    }
    .franchise__video{
       display: none;
@@ -4315,6 +4315,12 @@
    
 }
 @media (max-width: 500px){
+   .typical__cooperation{
+      p{
+         font-size: 16px;
+         line-height: 30px;
+      }
+   }
    .methods{
       .restriction__wrapper{
          width: 95%;
